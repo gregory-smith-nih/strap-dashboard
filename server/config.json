@@ -1,0 +1,6 @@
+{
+    "es": {
+        "port": 9200,
+        "host": "transporter-int.biadcloud.com"
+    }
+}

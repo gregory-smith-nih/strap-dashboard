@@ -1,0 +1,1827 @@
+{
+  "ctrp_strap_micro_container": [
+    {
+      "type": "cloudformation",
+      "tier": "int",
+      "stack_name": "STRAP-APIs",
+      "container_name": "ContainersContainer",
+      "image_name": "564062160093.dkr.ecr.us-east-1.amazonaws.com/ctrp_strap_micro_container:<version>"
+    },
+    {
+      "type": "cloudformation",
+      "tier": "uat",
+      "stack_name": "STRAP-Backend",
+      "container_name": "ContainersContainer",
+      "image_name": "564062160093.dkr.ecr.us-east-1.amazonaws.com/ctrp_strap_micro_container:<version>"
+    },
+    {
+      "type": "docker",
+      "tier": "perf",
+      "group": "silintl/ecs-deploy",
+      "cluster": "STRAP-PERF",
+      "service_name": "STRAP-ctrp_strap_micro_container-PERF",
+      "image_name": "564062160093.dkr.ecr.us-east-1.amazonaws.com/ctrp_strap_micro_container:<version>"
+    },
+    {
+      "type": "cloudformation",
+      "tier": "prod",
+      "stack_name": "STRAP-Backend",
+      "container_name": "ContainersContainer",
+      "image_name": "564062160093.dkr.ecr.us-east-1.amazonaws.com/ctrp_strap_micro_container:<version>"
+    }
+  ],
+  "ctrp_micro_trial_private": [
+    {
+      "type": "cloudformation",
+      "tier": "int",
+      "stack_name": "STRAP-APIs",
+      "container_name": "TrialsContainer",
+      "image_name": "564062160093.dkr.ecr.us-east-1.amazonaws.com/ctrp_micro_trial_private:<version>"
+    },
+    {
+      "type": "cloudformation",
+      "tier": "uat",
+      "stack_name": "STRAP-Backend",
+      "container_name": "TrialsContainer",
+      "image_name": "564062160093.dkr.ecr.us-east-1.amazonaws.com/ctrp_micro_trial_private:<version>"
+    },
+    {
+      "type": "docker",
+      "tier": "perf",
+      "group": "silintl/ecs-deploy",
+      "cluster": "STRAP-PERF",
+      "service_name": "STRAP-ctrp_micro_trial_private-PERF",
+      "image_name": "564062160093.dkr.ecr.us-east-1.amazonaws.com/ctrp_micro_trial_private:<version>"
+    },
+    {
+      "type": "cloudformation",
+      "tier": "prod",
+      "stack_name": "STRAP-Backend",
+      "container_name": "TrialsContainer",
+      "image_name": "564062160093.dkr.ecr.us-east-1.amazonaws.com/ctrp_micro_trial_private:<version>"
+    }
+  ],
+  "ctrp_micro_trial_migration": [
+    {
+      "type": "docker",
+      "tier": "int",
+      "group": "silintl/ecs-deploy",
+      "cluster": "STRAP-IntTest",
+      "service_name": "STRAP-ctrp_micro_trial_migration-INTTEST",
+      "image_name": "fnlcr/ctrp_micro_trial_migration:<version>"
+    },
+    {
+      "type": "docker",
+      "tier": "uat",
+      "group": "silintl/ecs-deploy",
+      "cluster": "STRAP-UAT",
+      "service_name": "STRAP-ctrp_micro_trial_migration-UAT",
+      "image_name": "fnlcr/ctrp_micro_trial_migration:<version>"
+    },
+    {
+      "type": "docker",
+      "tier": "perf",
+      "group": "silintl/ecs-deploy",
+      "cluster": "STRAP-PERF",
+      "service_name": "STRAP-ctrp_micro_trial_migration-PERF",
+      "image_name": "fnlcr/ctrp_micro_trial_migration:<version>"
+    },
+    {
+      "type": "docker",
+      "tier": "prod",
+      "group": "silintl/ecs-deploy",
+      "cluster": "STRAP-PROD",
+      "service_name": "STRAP-ctrp_micro_trial_migration-PROD",
+      "image_name": "fnlcr/ctrp_micro_trial_migration:<version>"
+    }
+  ],
+  "ctrp_micro_org": [
+    {
+      "type": "cloudformation",
+      "tier": "int",
+      "stack_name": "STRAP-APIs",
+      "container_name": "OrgsContainer",
+      "image_name": "564062160093.dkr.ecr.us-east-1.amazonaws.com/ctrp_micro_org:<version>"
+    },
+    {
+      "type": "cloudformation",
+      "tier": "uat",
+      "stack_name": "STRAP-Backend",
+      "container_name": "OrgsContainer",
+      "image_name": "564062160093.dkr.ecr.us-east-1.amazonaws.com/ctrp_micro_org:<version>"
+    },
+    {
+      "type": "docker",
+      "tier": "perf",
+      "group": "silintl/ecs-deploy",
+      "cluster": "STRAP-PERF",
+      "service_name": "STRAP-ctrp_micro_org-PERF",
+      "image_name": "564062160093.dkr.ecr.us-east-1.amazonaws.com/ctrp_micro_org:<version>"
+    },
+    {
+      "type": "cloudformation",
+      "tier": "prod",
+      "stack_name": "STRAP-Backend",
+      "container_name": "OrgsContainer",
+      "image_name": "564062160093.dkr.ecr.us-east-1.amazonaws.com/ctrp_micro_org:<version>"
+    }
+  ],
+  "ctrp_micro_person": [
+    {
+      "type": "cloudformation",
+      "tier": "int",
+      "stack_name": "STRAP-APIs",
+      "container_name": "PersonsContainer",
+      "image_name": "564062160093.dkr.ecr.us-east-1.amazonaws.com/ctrp_micro_person:<version>"
+    },
+    {
+      "type": "cloudformation",
+      "tier": "uat",
+      "stack_name": "STRAP-Backend",
+      "container_name": "PersonsContainer",
+      "image_name": "564062160093.dkr.ecr.us-east-1.amazonaws.com/ctrp_micro_person:<version>"
+    },
+    {
+      "type": "docker",
+      "tier": "perf",
+      "group": "silintl/ecs-deploy",
+      "cluster": "STRAP-PERF",
+      "service_name": "STRAP-ctrp_micro_person-PERF",
+      "image_name": "564062160093.dkr.ecr.us-east-1.amazonaws.com/ctrp_micro_person:<version>"
+    },
+    {
+      "type": "cloudformation",
+      "tier": "prod",
+      "stack_name": "STRAP-Backend",
+      "container_name": "PersonsContainer",
+      "image_name": "564062160093.dkr.ecr.us-east-1.amazonaws.com/ctrp_micro_person:<version>"
+    }
+  ],
+  "ctrp_micro_patient": [
+    {
+      "type": "cloudformation",
+      "tier": "int",
+      "stack_name": "STRAP-APIs",
+      "container_name": "PatientsContainer",
+      "image_name": "564062160093.dkr.ecr.us-east-1.amazonaws.com/ctrp_micro_patient:<version>"
+    },
+    {
+      "type": "cloudformation",
+      "tier": "uat",
+      "stack_name": "STRAP-Backend",
+      "container_name": "PatientsContainer",
+      "image_name": "564062160093.dkr.ecr.us-east-1.amazonaws.com/ctrp_micro_patient:<version>"
+    },
+    {
+      "type": "docker",
+      "tier": "perf",
+      "group": "silintl/ecs-deploy",
+      "cluster": "STRAP-PERF",
+      "service_name": "STRAP-ctrp_micro_patient-PERF",
+      "image_name": "564062160093.dkr.ecr.us-east-1.amazonaws.com/ctrp_micro_patient:<version>"
+    },
+    {
+      "type": "cloudformation",
+      "tier": "prod",
+      "stack_name": "STRAP-Backend",
+      "container_name": "PatientsContainer",
+      "image_name": "564062160093.dkr.ecr.us-east-1.amazonaws.com/ctrp_micro_patient:<version>"
+    }
+  ],
+  "ctrp_micro_audit": [
+    {
+      "type": "cloudformation",
+      "tier": "int",
+      "stack_name": "STRAP-APIs",
+      "container_name": "AuditsContainer",
+      "image_name": "564062160093.dkr.ecr.us-east-1.amazonaws.com/ctrp_micro_audit:<version>"
+    },
+    {
+      "type": "cloudformation",
+      "tier": "uat",
+      "stack_name": "STRAP-Backend",
+      "container_name": "AuditsContainer",
+      "image_name": "564062160093.dkr.ecr.us-east-1.amazonaws.com/ctrp_micro_audit:<version>"
+    },
+    {
+      "type": "docker",
+      "tier": "perf",
+      "group": "silintl/ecs-deploy",
+      "cluster": "STRAP-PERF",
+      "service_name": "STRAP-ctrp_micro_audit-PERF",
+      "image_name": "564062160093.dkr.ecr.us-east-1.amazonaws.com/ctrp_micro_audit:<version>"
+    },
+    {
+      "type": "cloudformation",
+      "tier": "prod",
+      "stack_name": "STRAP-Backend",
+      "container_name": "AuditsContainer",
+      "image_name": "564062160093.dkr.ecr.us-east-1.amazonaws.com/ctrp_micro_audit:<version>"
+    }
+  ],
+  "strap-micro-analytics-api": [
+    {
+      "type": "cloudformation",
+      "tier": "int",
+      "stack_name": "STRAP-APIs",
+      "container_name": "AnalyticsContainer",
+      "image_name": "564062160093.dkr.ecr.us-east-1.amazonaws.com/strap-micro-analytics-api:<version>"
+    },
+    {
+      "type": "cloudformation",
+      "tier": "uat",
+      "stack_name": "STRAP-Backend",
+      "container_name": "AnalyticsContainer",
+      "image_name": "564062160093.dkr.ecr.us-east-1.amazonaws.com/strap-micro-analytics-api:<version>"
+    },
+    {
+      "type": "docker",
+      "tier": "perf",
+      "group": "silintl/ecs-deploy",
+      "cluster": "STRAP-PERF",
+      "service_name": "STRAP-strap-micro-analytics-api-PERF",
+      "image_name": "564062160093.dkr.ecr.us-east-1.amazonaws.com/strap-micro-analytics-api:<version>"
+    },
+    {
+      "type": "cloudformation",
+      "tier": "prod",
+      "stack_name": "STRAP-Backend",
+      "container_name": "AnalyticsContainer",
+      "image_name": "564062160093.dkr.ecr.us-east-1.amazonaws.com/strap-micro-analytics-api:<version>"
+    }
+  ],
+  "ctrp-evs-cache": [
+    {
+      "type": "cloudformation",
+      "tier": "int",
+      "stack_name": "STRAP-APIs",
+      "container_name": "EvsCacheContainer",
+      "image_name": "564062160093.dkr.ecr.us-east-1.amazonaws.com/ctrp-evs-cache:<version>"
+    },
+    {
+      "type": "cloudformation",
+      "tier": "uat",
+      "stack_name": "STRAP-Backend",
+      "container_name": "EvsCacheContainer",
+      "image_name": "564062160093.dkr.ecr.us-east-1.amazonaws.com/ctrp-evs-cache:<version>"
+    },
+    {
+      "type": "docker",
+      "tier": "perf",
+      "group": "silintl/ecs-deploy",
+      "cluster": "STRAP-PERF",
+      "service_name": "STRAP-ctrp-evs-cache-PERF",
+      "image_name": "564062160093.dkr.ecr.us-east-1.amazonaws.com/ctrp-evs-cache:<version>"
+    },
+    {
+      "type": "cloudformation",
+      "tier": "prod",
+      "stack_name": "STRAP-Backend",
+      "container_name": "EvsCacheContainer",
+      "image_name": "564062160093.dkr.ecr.us-east-1.amazonaws.com/ctrp-evs-cache:<version>"
+    }
+  ],
+  "ctrp-trials-enrichment": [
+    {
+      "type": "cloudformation",
+      "tier": "int",
+      "stack_name": "STRAP-APIs",
+      "container_name": "TrialEnrichmentContainer",
+      "image_name": "564062160093.dkr.ecr.us-east-1.amazonaws.com/ctrp-trials-enrichment:<version>"
+    },
+    {
+      "type": "cloudformation",
+      "tier": "uat",
+      "stack_name": "STRAP-Backend",
+      "container_name": "TrialEnrichmentContainer",
+      "image_name": "564062160093.dkr.ecr.us-east-1.amazonaws.com/ctrp-trials-enrichment:<version>"
+    },
+    {
+      "type": "docker",
+      "tier": "perf",
+      "group": "silintl/ecs-deploy",
+      "cluster": "STRAP-PERF",
+      "service_name": "STRAP-ctrp-trial-enrichment-PERF",
+      "image_name": "564062160093.dkr.ecr.us-east-1.amazonaws.com/ctrp-trials-enrichment:<version>"
+    },
+    {
+      "type": "cloudformation",
+      "tier": "prod",
+      "stack_name": "STRAP-Backend",
+      "container_name": "TrialEnrichmentContainer",
+      "image_name": "564062160093.dkr.ecr.us-east-1.amazonaws.com/ctrp-trials-enrichment:<version>"
+    }
+  ],
+  "nci-strap-documentation": [
+    {
+      "type": "docker",
+      "tier": "int",
+      "group": "silintl/ecs-deploy",
+      "cluster": "STRAP-IntTest",
+      "service_name": "STRAP-nci-strap-documentation-INTTEST",
+      "image_name": "564062160093.dkr.ecr.us-east-1.amazonaws.com/nci-strap-documentation:<version>"
+    },
+    {
+      "type": "docker",
+      "tier": "uat",
+      "group": "silintl/ecs-deploy",
+      "cluster": "STRAP-UAT",
+      "service_name": "STRAP-nci-strap-documentation-UAT",
+      "image_name": "564062160093.dkr.ecr.us-east-1.amazonaws.com/nci-strap-documentation:<version>"
+    },
+    {
+      "type": "docker",
+      "tier": "perf",
+      "group": "silintl/ecs-deploy",
+      "cluster": "STRAP-PERF",
+      "service_name": "STRAP-nci-strap-documentation-PERF",
+      "image_name": "564062160093.dkr.ecr.us-east-1.amazonaws.com/nci-strap-documentation:<version>"
+    },
+    {
+      "type": "docker",
+      "tier": "prod",
+      "group": "silintl/ecs-deploy",
+      "cluster": "STRAP-PROD",
+      "service_name": "STRAP-nci-strap-documentation-PROD",
+      "image_name": "564062160093.dkr.ecr.us-east-1.amazonaws.com/nci-strap-documentation:<version>"
+    }
+  ],
+  "nci-strap-ui_old": [
+    {
+      "type": "docker",
+      "tier": "int",
+      "group": "silintl/ecs-deploy",
+      "cluster": "STRAP-IntTest",
+      "service_name": "STRAP-nci-strap-ui-INTTEST",
+      "image_name": "564062160093.dkr.ecr.us-east-1.amazonaws.com/nci-strap-ui:<version>"
+    },
+    {
+      "type": "docker",
+      "tier": "uat",
+      "group": "silintl/ecs-deploy",
+      "cluster": "STRAP-UAT",
+      "service_name": "STRAP-nci-strap-ui-UAT",
+      "image_name": "564062160093.dkr.ecr.us-east-1.amazonaws.com/nci-strap-ui:<version>"
+    },
+    {
+      "type": "docker",
+      "tier": "perf",
+      "group": "silintl/ecs-deploy",
+      "cluster": "STRAP-PERF",
+      "service_name": "STRAP-nci-strap-ui-PERF",
+      "image_name": "564062160093.dkr.ecr.us-east-1.amazonaws.com/nci-strap-ui:<version>"
+    },
+    {
+      "type": "docker",
+      "tier": "prod",
+      "group": "silintl/ecs-deploy",
+      "cluster": "STRAP-PROD",
+      "service_name": "STRAP-nci-strap-ui-PROD",
+      "image_name": "564062160093.dkr.ecr.us-east-1.amazonaws.com/nci-strap-ui:<version>"
+    }
+  ],
+  "nci-strap-ui": [
+    {
+      "type": "s3",
+      "tier": "int",
+      "zip_s3_path": "www.strap-ui.int/strap-ui.<version>.zip",
+      "container_s3_path": "www.strap-ui.int/Latest",
+      "secret_id": "strap/okta",
+      "process_file": "js/*.js*",
+      "process_variables": {
+        "I___API_URL___I": "API_URL",
+        "I___OKTA_ID___I": "OKTA_ID",
+        "I___OKTA_ISSUER___I": "OKTA_ISSUER",
+        "I___LEGACY_API_URL___I": "LEGACY_API_URL",
+        "I___TABLEAU_SERVER_URL___I": "TABLEAU_SERVER_URL",
+        "I___SERVER_URL___I": "SERVER_URL",
+        "I___GMAP_KEY___I": "GMAP_KEY",
+        "I___TARGOMO_KEY___I": "TARGOMO_KEY"
+      }
+    },
+    {
+      "type": "s3",
+      "tier": "uat",
+      "zip_s3_path": "www.strap-ui.int/strap-ui.<version>.zip",
+      "container_s3_path": "www.strap-ui.uat/Latest",
+      "secret_id": "strap/okta",
+      "process_file": "js/*.js*",
+      "process_variables": {
+        "I___API_URL___I": "API_URL",
+        "I___OKTA_ID___I": "OKTA_ID",
+        "I___OKTA_ISSUER___I": "OKTA_ISSUER",
+        "I___LEGACY_API_URL___I": "LEGACY_API_URL",
+        "I___TABLEAU_SERVER_URL___I": "TABLEAU_SERVER_URL",
+        "I___SERVER_URL___I": "SERVER_URL"
+      }
+    },
+    {
+      "type": "s3",
+      "tier": "prod",
+      "zip_s3_path": "www.strap-ui.int/strap-ui.<version>.zip",
+      "container_s3_path": "www.strap-ui.prod/Latest",
+      "secret_id": "strap/okta",
+      "process_file": "js/*.js*",
+      "process_variables": {
+        "I___API_URL___I": "API_URL",
+        "I___OKTA_ID___I": "OKTA_ID",
+        "I___OKTA_ISSUER___I": "OKTA_ISSUER",
+        "I___LEGACY_API_URL___I": "LEGACY_API_URL",
+        "I___TABLEAU_SERVER_URL___I": "TABLEAU_SERVER_URL",
+        "I___SERVER_URL___I": "SERVER_URL"
+      }
+    }
+  ],
+  "nci-strap-swagger": [
+    {
+      "type": "s3",
+      "tier": "int",
+      "zip_s3_path": "www.strap-ui.int/nci-strap-swagger.<version>.zip",
+      "container_s3_path": "www.strap-ui.int/Latest/swagger",
+      "secret_id": "strap/okta",
+      "process_file": "js/*.js*",
+      "process_variables": {
+        "I___API_URL___I": "API_URL",
+        "I___OKTA_ID___I": "OKTA_ID",
+        "I___OKTA_ISSUER___I": "OKTA_ISSUER",
+        "I___SERVER_URL___I": "SERVER_URL"
+      }
+    },
+    {
+      "type": "s3",
+      "tier": "uat",
+      "zip_s3_path": "www.strap-ui.int/nci-strap-swagger.<version>.zip",
+      "container_s3_path": "www.strap-ui.uat/Latest/swagger",
+      "secret_id": "strap/okta",
+      "process_file": "js/*.js*",
+      "process_variables": {
+        "I___API_URL___I": "API_URL",
+        "I___OKTA_ID___I": "OKTA_ID",
+        "I___OKTA_ISSUER___I": "OKTA_ISSUER",
+        "I___SERVER_URL___I": "SERVER_URL"
+      }
+    },
+    {
+      "type": "s3",
+      "tier": "prod",
+      "zip_s3_path": "www.strap-ui.int/nci-strap-swagger.<version>.zip",
+      "container_s3_path": "www.strap-ui.prod/Latest/swagger",
+      "secret_id": "strap/okta",
+      "process_file": "js/*.js*",
+      "process_variables": {
+        "I___API_URL___I": "API_URL",
+        "I___OKTA_ID___I": "OKTA_ID",
+        "I___OKTA_ISSUER___I": "OKTA_ISSUER",
+        "I___SERVER_URL___I": "SERVER_URL"
+      }
+    }
+  ],
+  "nci-strap-api": [
+    {
+      "type": "docker",
+      "tier": "int",
+      "group": "silintl/ecs-deploy",
+      "cluster": "CTRP-IntTest-Backend",
+      "service_name": "CTRP-STRAP-nci-strap-api-INTTEST",
+      "image_name": "564062160093.dkr.ecr.us-east-1.amazonaws.com/nci-strap-api:<version>"
+    },
+    {
+      "type": "docker",
+      "tier": "uat",
+      "group": "silintl/ecs-deploy",
+      "cluster": "STRAP-UAT",
+      "service_name": "STRAP-nci-strap-api-UAT",
+      "image_name": "564062160093.dkr.ecr.us-east-1.amazonaws.com/nci-strap-api:<version>"
+    },
+    {
+      "type": "docker",
+      "tier": "perf",
+      "group": "silintl/ecs-deploy",
+      "cluster": "STRAP-PERF",
+      "service_name": "STRAP-nci-strap-api-PERF",
+      "image_name": "564062160093.dkr.ecr.us-east-1.amazonaws.com/nci-strap-api:<version>"
+    },
+    {
+      "type": "docker",
+      "tier": "prod",
+      "group": "silintl/ecs-deploy",
+      "cluster": "STRAP-PROD",
+      "service_name": "STRAP-nci-strap-api-PROD",
+      "image_name": "564062160093.dkr.ecr.us-east-1.amazonaws.com/nci-strap-api:<version>"
+    }
+  ],
+  "ctrp-audit-lambda": [
+    {
+      "type": "lambda",
+      "tier": "int",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "ctrp-audit-lambda:<version>.zip",
+      "function_name": "ctrp-audit-lambda",
+      "function_description": "CloudDeploy ctrp-audit-lambda INT version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "uat",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "ctrp-audit-lambda:<version>.zip",
+      "function_name": "ctrp-audit-lambda",
+      "function_description": "CloudDeploy ctrp-audit-lambda UAT version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "perf",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "ctrp-audit-lambda:<version>.zip",
+      "function_name": "ctrp-audit-lambda",
+      "function_description": "CloudDeploy ctrp-audit-lambda PERF version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "prod",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "ctrp-audit-lambda:<version>.zip",
+      "function_name": "ctrp-audit-lambda",
+      "function_description": "CloudDeploy ctrp-audit-lambda PROD version:<version>"
+    }
+  ],
+  "ctrp-entity-query-lambda": [
+    {
+      "type": "lambda",
+      "tier": "int",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "ctrp-entity-query-lambda:<version>.zip",
+      "function_name": "ctrp-entity-query-lambda",
+      "function_description": "CloudDeploy ctrp-entity-query-lambda INT version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "uat",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "ctrp-entity-query-lambda:<version>.zip",
+      "function_name": "ctrp-entity-query-lambda",
+      "function_description": "CloudDeploy ctrp-entity-query-lambda UAT version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "perf",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "ctrp-entity-query-lambda:<version>.zip",
+      "function_name": "ctrp-entity-query-lambda",
+      "function_description": "CloudDeploy ctrp-entity-query-lambda PERF version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "prod",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "ctrp-entity-query-lambda:<version>.zip",
+      "function_name": "ctrp-entity-query-lambda",
+      "function_description": "CloudDeploy ctrp-entity-query-lambda PROD version:<version>"
+    }
+  ],
+  "ctrp-trials-enrich-lambda": [
+    {
+      "type": "lambda",
+      "tier": "int",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "ctrp-trials-enrich-lambda:<version>.zip",
+      "function_name": "ctrp-trials-enrich-lambda",
+      "function_description": "CloudDeploy ctrp-trials-enrich-lambda INT version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "uat",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "ctrp-trials-enrich-lambda:<version>.zip",
+      "function_name": "ctrp-trials-enrich-lambda",
+      "function_description": "CloudDeploy ctrp-trials-enrich-lambda UAT version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "perf",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "ctrp-trials-enrich-lambda:<version>.zip",
+      "function_name": "ctrp-trials-enrich-lambda",
+      "function_description": "CloudDeploy ctrp-trials-enrich-lambda PERF version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "prod",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "ctrp-trials-enrich-lambda:<version>.zip",
+      "function_name": "ctrp-trials-enrich-lambda",
+      "function_description": "CloudDeploy ctrp-trials-enrich-lambda PROD version:<version>"
+    }
+  ],
+  "ctrp-trials-es-lambda-private": [
+    {
+      "type": "lambda",
+      "tier": "int",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "ctrp-trials-es-lambda-private:<version>.zip",
+      "function_name": "ctrp-trials-es-lambda-private",
+      "function_description": "CloudDeploy ctrp-trials-es-lambda-private INT version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "uat",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "ctrp-trials-es-lambda-private:<version>.zip",
+      "function_name": "ctrp-trials-es-lambda-private",
+      "function_description": "CloudDeploy ctrp-trials-es-lambda-private UAT version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "perf",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "ctrp-trials-es-lambda-private:<version>.zip",
+      "function_name": "ctrp-trials-es-lambda-private",
+      "function_description": "CloudDeploy ctrp-trials-es-lambda-private PERF version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "prod",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "ctrp-trials-es-lambda-private:<version>.zip",
+      "function_name": "ctrp-trials-es-lambda-private",
+      "function_description": "CloudDeploy ctrp-trials-es-lambda-private PROD version:<version>"
+    }
+  ],
+  "ctrp-persons-es-lambda-private": [
+    {
+      "type": "lambda",
+      "tier": "int",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "ctrp-persons-es-lambda-private:<version>.zip",
+      "function_name": "ctrp-persons-es-lambda-private",
+      "function_description": "CloudDeploy ctrp-persons-es-lambda-private INT version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "uat",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "ctrp-persons-es-lambda-private:<version>.zip",
+      "function_name": "ctrp-persons-es-lambda-private",
+      "function_description": "CloudDeploy ctrp-persons-es-lambda-private UAT version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "perf",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "ctrp-persons-es-lambda-private:<version>.zip",
+      "function_name": "ctrp-persons-es-lambda-private",
+      "function_description": "CloudDeploy ctrp-persons-es-lambda-private PERF version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "prod",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "ctrp-persons-es-lambda-private:<version>.zip",
+      "function_name": "ctrp-persons-es-lambda-private",
+      "function_description": "CloudDeploy ctrp-persons-es-lambda-private PROD version:<version>"
+    }
+  ],
+  "ctrp-orgs-es-lambda-private": [
+    {
+      "type": "lambda",
+      "tier": "int",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "ctrp-orgs-es-lambda-private:<version>.zip",
+      "function_name": "ctrp-orgs-es-lambda-private",
+      "function_description": "CloudDeploy ctrp-orgs-es-lambda-private INT version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "uat",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "ctrp-orgs-es-lambda-private:<version>.zip",
+      "function_name": "ctrp-orgs-es-lambda-private",
+      "function_description": "CloudDeploy ctrp-orgs-es-lambda-private UAT version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "perf",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "ctrp-orgs-es-lambda-private:<version>.zip",
+      "function_name": "ctrp-orgs-es-lambda-private",
+      "function_description": "CloudDeploy ctrp-orgs-es-lambda-private PERF version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "prod",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "ctrp-orgs-es-lambda-private:<version>.zip",
+      "function_name": "ctrp-orgs-es-lambda-private",
+      "function_description": "CloudDeploy ctrp-orgs-es-lambda-private PROD version:<version>"
+    }
+  ],
+  "ctrp-trials-cleanup-lambda": [
+    {
+      "type": "lambda",
+      "tier": "int",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "ctrp-trials-cleanup-lambda:<version>.zip",
+      "function_name": "ctrp-trials-cleanup-lambda",
+      "function_description": "CloudDeploy ctrp-trials-cleanup-lambda INT version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "uat",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "ctrp-trials-cleanup-lambda:<version>.zip",
+      "function_name": "ctrp-trials-cleanup-lambda",
+      "function_description": "CloudDeploy ctrp-trials-cleanup-lambda UAT version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "perf",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "ctrp-trials-cleanup-lambda:<version>.zip",
+      "function_name": "ctrp-trials-cleanup-lambda",
+      "function_description": "CloudDeploy ctrp-trials-cleanup-lambda PERF version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "prod",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "ctrp-trials-cleanup-lambda:<version>.zip",
+      "function_name": "ctrp-trials-cleanup-lambda",
+      "function_description": "CloudDeploy ctrp-trials-cleanup-lambda PROD version:<version>"
+    }
+  ],
+  "ctrp-persons-cleanup-lambda": [
+    {
+      "type": "lambda",
+      "tier": "int",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "ctrp-persons-cleanup-lambda:<version>.zip",
+      "function_name": "ctrp-persons-cleanup-lambda",
+      "function_description": "CloudDeploy ctrp-persons-cleanup-lambda INT version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "uat",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "ctrp-persons-cleanup-lambda:<version>.zip",
+      "function_name": "ctrp-persons-cleanup-lambda",
+      "function_description": "CloudDeploy ctrp-persons-cleanup-lambda UAT version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "perf",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "ctrp-persons-cleanup-lambda:<version>.zip",
+      "function_name": "ctrp-persons-cleanup-lambda",
+      "function_description": "CloudDeploy ctrp-persons-cleanup-lambda PERF version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "prod",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "ctrp-persons-cleanup-lambda:<version>.zip",
+      "function_name": "ctrp-persons-cleanup-lambda",
+      "function_description": "CloudDeploy ctrp-persons-cleanup-lambda PROD version:<version>"
+    }
+  ],
+  "ctrp-persons-aurora-lambda": [
+    {
+      "type": "lambda",
+      "tier": "int",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "ctrp-dw-persons-aurora-lambda:<version>.zip",
+      "function_name": "ctrp-dw-persons-aurora-lambda",
+      "function_description": "CloudDeploy ctrp-dw-persons-aurora-lambda INT version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "uat",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "ctrp-dw-persons-aurora-lambda:<version>.zip",
+      "function_name": "ctrp-dw-persons-aurora-lambda",
+      "function_description": "CloudDeploy ctrp-dw-persons-aurora-lambda UAT version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "prod",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "ctrp-dw-persons-aurora-lambda:<version>.zip",
+      "function_name": "ctrp-dw-persons-aurora-lambda",
+      "function_description": "CloudDeploy ctrp-dw-persons-aurora-lambda PROD version:<version>"
+    }
+  ],
+  "ctrp-patients-aurora-lambda": [
+    {
+      "type": "lambda",
+      "tier": "int",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "ctrp-dw-patients-aurora-lambda:<version>.zip",
+      "function_name": "ctrp-dw-patients-aurora-lambda",
+      "function_description": "CloudDeploy ctrp-dw-patients-aurora-lambda INT version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "uat",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "ctrp-dw-patients-aurora-lambda:<version>.zip",
+      "function_name": "ctrp-dw-patients-aurora-lambda",
+      "function_description": "CloudDeploy ctrp-dw-patients-aurora-lambda UAT version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "prod",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "ctrp-dw-patients-aurora-lambda:<version>.zip",
+      "function_name": "ctrp-dw-patients-aurora-lambda",
+      "function_description": "CloudDeploy ctrp-dw-patients-aurora-lambda PROD version:<version>"
+    }
+  ],
+  "ctrp-orgs-cleanup-lambda": [
+    {
+      "type": "lambda",
+      "tier": "int",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "ctrp-orgs-cleanup-lambda:<version>.zip",
+      "function_name": "ctrp-orgs-cleanup-lambda",
+      "function_description": "CloudDeploy ctrp-orgs-cleanup-lambda INT version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "uat",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "ctrp-orgs-cleanup-lambda:<version>.zip",
+      "function_name": "ctrp-orgs-cleanup-lambda",
+      "function_description": "CloudDeploy ctrp-orgs-cleanup-lambda UAT version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "perf",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "ctrp-orgs-cleanup-lambda:<version>.zip",
+      "function_name": "ctrp-orgs-cleanup-lambda",
+      "function_description": "CloudDeploy ctrp-orgs-cleanup-lambda PERF version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "prod",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "ctrp-orgs-cleanup-lambda:<version>.zip",
+      "function_name": "ctrp-orgs-cleanup-lambda",
+      "function_description": "CloudDeploy ctrp-orgs-cleanup-lambda PROD version:<version>"
+    }
+  ],
+  "ctrp-orgs-aurora-lambda": [
+    {
+      "type": "lambda",
+      "tier": "int",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "ctrp-dw-orgs-aurora-lambda:<version>.zip",
+      "function_name": "ctrp-dw-orgs-aurora-lambda",
+      "function_description": "CloudDeploy ctrp-dw-orgs-aurora-lambda INT version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "uat",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "ctrp-dw-orgs-aurora-lambda:<version>.zip",
+      "function_name": "ctrp-dw-orgs-aurora-lambda",
+      "function_description": "CloudDeploy ctrp-dw-orgs-aurora-lambda UAT version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "prod",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "ctrp-dw-orgs-aurora-lambda:<version>.zip",
+      "function_name": "ctrp-dw-orgs-aurora-lambda",
+      "function_description": "CloudDeploy ctrp-dw-orgs-aurora-lambda PROD version:<version>"
+    }
+  ],
+  "ctrp-trials-sqs-lambda": [
+    {
+      "type": "lambda",
+      "tier": "int",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "ctrp-trials-sqs-lambda:<version>.zip",
+      "function_name": "ctrp-trials-sqs-lambda",
+      "function_description": "CloudDeploy ctrp-trials-sqs-lambda INT version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "uat",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "ctrp-trials-sqs-lambda:<version>.zip",
+      "function_name": "ctrp-trials-sqs-lambda",
+      "function_description": "CloudDeploy ctrp-trials-sqs-lambda UAT version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "perf",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "ctrp-trials-sqs-lambda:<version>.zip",
+      "function_name": "ctrp-trials-sqs-lambda",
+      "function_description": "CloudDeploy ctrp-trials-sqs-lambda PERF version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "prod",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "ctrp-trials-sqs-lambda:<version>.zip",
+      "function_name": "ctrp-trials-sqs-lambda",
+      "function_description": "CloudDeploy ctrp-trials-sqs-lambda PROD version:<version>"
+    }
+  ],
+  "ctrp-persons-sqs-lambda": [
+    {
+      "type": "lambda",
+      "tier": "int",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "ctrp-persons-sqs-lambda:<version>.zip",
+      "function_name": "ctrp-persons-sqs-lambda",
+      "function_description": "CloudDeploy ctrp-persons-sqs-lambda INT version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "uat",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "ctrp-persons-sqs-lambda:<version>.zip",
+      "function_name": "ctrp-persons-sqs-lambda",
+      "function_description": "CloudDeploy ctrp-persons-sqs-lambda UAT version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "perf",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "ctrp-persons-sqs-lambda:<version>.zip",
+      "function_name": "ctrp-persons-sqs-lambda",
+      "function_description": "CloudDeploy ctrp-persons-sqs-lambda PERF version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "prod",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "ctrp-persons-sqs-lambda:<version>.zip",
+      "function_name": "ctrp-persons-sqs-lambda",
+      "function_description": "CloudDeploy ctrp-persons-sqs-lambda PROD version:<version>"
+    }
+  ],
+  "ctrp-orgs-sqs-lambda": [
+    {
+      "type": "lambda",
+      "tier": "int",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "ctrp-orgs-sqs-lambda:<version>.zip",
+      "function_name": "ctrp-orgs-sqs-lambda",
+      "function_description": "CloudDeploy ctrp-orgs-sqs-lambda INT version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "uat",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "ctrp-orgs-sqs-lambda:<version>.zip",
+      "function_name": "ctrp-orgs-sqs-lambda",
+      "function_description": "CloudDeploy ctrp-orgs-sqs-lambda UAT version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "perf",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "ctrp-orgs-sqs-lambda:<version>.zip",
+      "function_name": "ctrp-orgs-sqs-lambda",
+      "function_description": "CloudDeploy ctrp-orgs-sqs-lambda PERF version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "prod",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "ctrp-orgs-sqs-lambda:<version>.zip",
+      "function_name": "ctrp-orgs-sqs-lambda",
+      "function_description": "CloudDeploy ctrp-orgs-sqs-lambda PROD version:<version>"
+    }
+  ],
+  "ctrp-containers-cleanup-lambda": [
+    {
+      "type": "lambda",
+      "tier": "int",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "ctrp-containers-cleanup-lambda:<version>.zip",
+      "function_name": "ctrp-containers-cleanup-lambda",
+      "function_description": "CloudDeploy ctrp-containers-cleanup-lambda INT version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "uat",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "ctrp-containers-cleanup-lambda:<version>.zip",
+      "function_name": "ctrp-containers-cleanup-lambda",
+      "function_description": "CloudDeploy ctrp-containers-cleanup-lambda UAT version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "perf",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "ctrp-containers-cleanup-lambda:<version>.zip",
+      "function_name": "ctrp-containers-cleanup-lambda",
+      "function_description": "CloudDeploy ctrp-containers-cleanup-lambda PERF version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "prod",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "ctrp-containers-cleanup-lambda:<version>.zip",
+      "function_name": "ctrp-containers-cleanup-lambda",
+      "function_description": "CloudDeploy ctrp-containers-cleanup-lambda PROD version:<version>"
+    }
+  ],
+  "ctrp-strap-containers-aurora-lambda": [
+    {
+      "type": "lambda",
+      "tier": "int",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "ctrp-dw-containers-aurora-lambda:<version>.zip",
+      "function_name": "ctrp-dw-containers-aurora-lambda",
+      "function_description": "CloudDeploy ctrp-dw-containers-aurora-lambda INT version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "uat",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "ctrp-dw-containers-aurora-lambda:<version>.zip",
+      "function_name": "ctrp-dw-containers-aurora-lambda",
+      "function_description": "CloudDeploy ctrp-dw-containers-aurora-lambda UAT version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "prod",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "ctrp-dw-containers-aurora-lambda:<version>.zip",
+      "function_name": "ctrp-dw-containers-aurora-lambda",
+      "function_description": "CloudDeploy ctrp-dw-containers-aurora-lambda PROD version:<version>"
+    }
+  ],
+  "ctrp-patients-es-lambda-private": [
+    {
+      "type": "lambda",
+      "tier": "int",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "ctrp-patients-es-lambda-private:<version>.zip",
+      "function_name": "ctrp-patients-es-lambda-private",
+      "function_description": "CloudDeploy ctrp-patients-es-lambda-private INT version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "uat",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "ctrp-patients-es-lambda-private:<version>.zip",
+      "function_name": "ctrp-patients-es-lambda-private",
+      "function_description": "CloudDeploy ctrp-patients-es-lambda-private UAT version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "perf",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "ctrp-patients-es-lambda-private:<version>.zip",
+      "function_name": "ctrp-patients-es-lambda-private",
+      "function_description": "CloudDeploy ctrp-patients-es-lambda-private PERF version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "prod",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "ctrp-patients-es-lambda-private:<version>.zip",
+      "function_name": "ctrp-patients-es-lambda-private",
+      "function_description": "CloudDeploy ctrp-patients-es-lambda-private PROD version:<version>"
+    }
+  ],
+  "strap-etl": [
+    {
+      "type": "glue",
+      "tier": "int",
+      "source_s3_path": "ctrp-lambda-hub/strap-etl-glue/strap-etl-main-<version>.py",
+      "deploy_s3_path": "aws-glue-scripts-127516845550-us-east-1/strap/strap-etl-main.py"
+    },
+    {
+      "type": "lambda",
+      "tier": "int",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "strap-etl-pre-lambda:<version>.zip",
+      "function_name": "strap-etl-pre-lambda",
+      "function_description": "CloudDeploy strap strap-etl-pre version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "int",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "strap-etl-post-lambda:<version>.zip",
+      "function_name": "strap-etl-post-lambda",
+      "function_description": "CloudDeploy strap strap-etl-post version:<version>"
+    },
+    {
+      "type": "glue",
+      "tier": "uat",
+      "source_s3_path": "ctrp-lambda-hub/strap-etl-glue/strap-etl-main-<version>.py",
+      "deploy_s3_path": "aws-glue-scripts-668282225937-us-east-1/strap/strap-etl-main.py"
+    },
+    {
+      "type": "lambda",
+      "tier": "uat",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "strap-etl-pre-lambda:<version>.zip",
+      "function_name": "strap-etl-pre-lambda",
+      "function_description": "CloudDeploy strap strap-etl-pre version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "uat",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "strap-etl-post-lambda:<version>.zip",
+      "function_name": "strap-etl-post-lambda",
+      "function_description": "CloudDeploy strap strap-etl-post version:<version>"
+    },
+    {
+      "type": "glue",
+      "tier": "prod",
+      "source_s3_path": "ctrp-lambda-hub/strap-etl-glue/strap-etl-main-<version>.py",
+      "deploy_s3_path": "aws-glue-scripts-564062160093-us-east-1/strap/strap-etl-main.py"
+    },
+    {
+      "type": "lambda",
+      "tier": "prod",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "strap-etl-pre-lambda:<version>.zip",
+      "function_name": "strap-etl-pre-lambda",
+      "function_description": "CloudDeploy strap strap-etl-pre version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "prod",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "strap-etl-post-lambda:<version>.zip",
+      "function_name": "strap-etl-post-lambda",
+      "function_description": "CloudDeploy strap strap-etl-post version:<version>"
+    }
+  ],
+  "ctrp-clinical-trials-api": [
+    {
+      "type": "docker",
+      "tier": "int",
+      "group": "silintl/ecs-deploy",
+      "cluster": "CTAPI-IntTest-Backend",
+      "service_name": "CTAPI-ctrp-clinical-trials-api-INTTEST",
+      "image_name": "fnlcr/ctrp-clinical-trials-api:<version>"
+    },
+    {
+      "type": "docker",
+      "tier": "uat",
+      "group": "silintl/ecs-deploy",
+      "cluster": "CTAPI-UAT-Backend",
+      "service_name": "CTAPI-ctrp-clinical-trials-api-UAT",
+      "image_name": "fnlcr/ctrp-clinical-trials-api:<version>"
+    }
+  ],
+  "ctrp-patients-sqs-lambda": [
+    {
+      "type": "lambda",
+      "tier": "int",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "ctrp-patients-sqs-lambda:<version>.zip",
+      "function_name": "ctrp-patients-sqs-lambda",
+      "function_description": "CloudDeploy ctrp-patients-sqs-lambda version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "uat",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "ctrp-patients-sqs-lambda:<version>.zip",
+      "function_name": "ctrp-patients-sqs-lambda",
+      "function_description": "CloudDeploy ctrp-patients-sqs-lambda version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "prod",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "ctrp-patients-sqs-lambda:<version>.zip",
+      "function_name": "ctrp-patients-sqs-lambda",
+      "function_description": "CloudDeploy ctrp-patients-sqs-lambda version:<version>"
+    }
+  ],
+  "strap-entity-migration": [
+    {
+      "type": "lambda",
+      "tier": "int",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "strap-entity-migration-lambda:<version>.zip",
+      "function_name": "strap-entity-migration-lambda",
+      "function_description": "CloudDeploy strap-entity-migration-lambda version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "int",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "strap-patient-migration-lambda:<version>.zip",
+      "function_name": "strap-patient-migration-lambda",
+      "function_description": "CloudDeploy strap-patient-migration-lambda version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "int",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "strap-person-migration-lambda:<version>.zip",
+      "function_name": "strap-person-migration-lambda",
+      "function_description": "CloudDeploy strap-person-migration-lambda version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "int",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "strap-organization-migration-lambda:<version>.zip",
+      "function_name": "strap-organization-migration-lambda",
+      "function_description": "CloudDeploy strap-organization-migration-lambda version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "int",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "strap-container-migration-lambda:<version>.zip",
+      "function_name": "strap-container-migration-lambda",
+      "function_description": "CloudDeploy strap-container-migration-lambda version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "int",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "strap-trial-migration-lambda:<version>.zip",
+      "function_name": "strap-trial-migration-lambda",
+      "function_description": "CloudDeploy strap-trial-migration-lambda version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "int",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "strap-count-history-participant-migration-lambda:<version>.zip",
+      "function_name": "strap-count-history-participant-migration-lambda",
+      "function_description": "CloudDeploy strap-count-history-participant-migration-lambda version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "uat",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "strap-entity-migration-lambda:<version>.zip",
+      "function_name": "strap-entity-migration-lambda",
+      "function_description": "CloudDeploy strap-entity-migration-lambda version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "uat",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "strap-patient-migration-lambda:<version>.zip",
+      "function_name": "strap-patient-migration-lambda",
+      "function_description": "CloudDeploy strap-patient-migration-lambda version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "uat",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "strap-person-migration-lambda:<version>.zip",
+      "function_name": "strap-person-migration-lambda",
+      "function_description": "CloudDeploy strap-person-migration-lambda version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "uat",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "strap-organization-migration-lambda:<version>.zip",
+      "function_name": "strap-organization-migration-lambda",
+      "function_description": "CloudDeploy strap-organization-migration-lambda version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "uat",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "strap-container-migration-lambda:<version>.zip",
+      "function_name": "strap-container-migration-lambda",
+      "function_description": "CloudDeploy strap-container-migration-lambda version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "uat",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "strap-trial-migration-lambda:<version>.zip",
+      "function_name": "strap-trial-migration-lambda",
+      "function_description": "CloudDeploy strap-trial-migration-lambda version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "uat",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "strap-count-history-participant-migration-lambda:<version>.zip",
+      "function_name": "strap-count-history-participant-migration-lambda",
+      "function_description": "CloudDeploy strap-count-history-participant-migration-lambda version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "prod",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "strap-entity-migration-lambda:<version>.zip",
+      "function_name": "strap-entity-migration-lambda",
+      "function_description": "CloudDeploy strap-entity-migration-lambda version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "prod",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "strap-patient-migration-lambda:<version>.zip",
+      "function_name": "strap-patient-migration-lambda",
+      "function_description": "CloudDeploy strap-patient-migration-lambda version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "prod",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "strap-person-migration-lambda:<version>.zip",
+      "function_name": "strap-person-migration-lambda",
+      "function_description": "CloudDeploy strap-person-migration-lambda version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "prod",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "strap-organization-migration-lambda:<version>.zip",
+      "function_name": "strap-organization-migration-lambda",
+      "function_description": "CloudDeploy strap-organization-migration-lambda version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "prod",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "strap-container-migration-lambda:<version>.zip",
+      "function_name": "strap-container-migration-lambda",
+      "function_description": "CloudDeploy strap-container-migration-lambda version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "prod",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "strap-trial-migration-lambda:<version>.zip",
+      "function_name": "strap-trial-migration-lambda",
+      "function_description": "CloudDeploy strap-trial-migration-lambda version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "prod",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "strap-count-history-participant-migration-lambda:<version>.zip",
+      "function_name": "strap-count-history-participant-migration-lambda",
+      "function_description": "CloudDeploy strap-count-history-participant-migration-lambda version:<version>"
+    }
+  ],
+  "ctrp-trials-aurora-lambda": [
+    {
+      "type": "lambda",
+      "tier": "int",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "ctrp-dw-trials-aurora-lambda:<version>.zip",
+      "function_name": "ctrp-dw-trials-aurora-lambda",
+      "function_description": "CloudDeploy ctrp-dw-trials-aurora-lambda INT version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "uat",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "ctrp-dw-trials-aurora-lambda:<version>.zip",
+      "function_name": "ctrp-dw-trials-aurora-lambda",
+      "function_description": "CloudDeploy ctrp-dw-trials-aurora-lambda UAT version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "prod",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "ctrp-dw-trials-aurora-lambda:<version>.zip",
+      "function_name": "ctrp-dw-trials-aurora-lambda",
+      "function_description": "CloudDeploy ctrp-dw-trials-aurora-lambda PROD version:<version>"
+    }
+  ],
+  "ctrp-strap-s3-reconfiguration": [
+    {
+      "type": "lambda",
+      "tier": "int",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "ctrp-strap-s3-reconfiguration-lambda:<version>.zip",
+      "function_name": "ctrp-strap-s3-reconfig-lambda-int",
+      "function_description": "CloudDeploy ctrp-strap-s3-reconfiguration-lambda INT version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "uat",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "ctrp-strap-s3-reconfiguration-lambda:<version>.zip",
+      "function_name": "ctrp-strap-s3-reconfig-lambda-uat",
+      "function_description": "CloudDeploy ctrp-strap-s3-reconfiguration-lambda UAT version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "prod",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "ctrp-strap-s3-reconfiguration-lambda:<version>.zip",
+      "function_name": "ctrp-strap-s3-reconfig-lambda-prod",
+      "function_description": "CloudDeploy ctrp-strap-s3-reconfiguration-lambda PROD version:<version>"
+    }
+  ],
+  "ctrp-strap-cleanup-lambda": [
+    {
+      "type": "lambda",
+      "tier": "int",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "ctrp-strap-cleanup-lambda:<version>.zip",
+      "function_name": "ctrp-strap-cleanup-lambda",
+      "function_description": "CloudDeploy ctrp-strap-cleanup-lambda version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "uat",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "ctrp-strap-cleanup-lambda:<version>.zip",
+      "function_name": "ctrp-strap-cleanup-lambda",
+      "function_description": "CloudDeploy ctrp-strap-cleanup-lambda version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "prod",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "ctrp-strap-cleanup-lambda:<version>.zip",
+      "function_name": "ctrp-strap-cleanup-lambda",
+      "function_description": "CloudDeploy ctrp-strap-cleanup-lambda version:<version>"
+    }
+  ],
+  "ctrp_strap_export_lambda": [
+    {
+      "type": "lambda",
+      "tier": "int",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "ctrp_strap_export_lambda:<version>.zip",
+      "function_name": "ctrp-strap-export-lambda",
+      "function_description": "CloudDeploy ctrp-strap-export-lambda int version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "uat",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "ctrp_strap_export_lambda:<version>.zip",
+      "function_name": "ctrp-strap-export-lambda",
+      "function_description": "CloudDeploy ctrp-strap-export-lambda uat version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "prod",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "ctrp_strap_export_lambda:<version>.zip",
+      "function_name": "ctrp-strap-export-lambda",
+      "function_description": "CloudDeploy ctrp-strap-export-lambda prod version:<version>"
+    }
+  ],
+  "nci-evs-enrichment": [
+    {
+      "type": "lambda",
+      "tier": "int",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "evs/evs-enrichment-lambda:<version>.zip",
+      "function_name": "strap-evs-enrichment-enrich-lambda-int",
+      "function_description": "CloudDeploy strap-evs-enrichment-enrich-lambda int version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "int",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "evs/evs-enrichment-lambda:<version>.zip",
+      "function_name": "strap-evs-enrichment-post-lambda-int",
+      "function_description": "CloudDeploy strap-evs-enrichment-post-lambda int version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "uat",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "evs/evs-enrichment-lambda:<version>.zip",
+      "function_name": "strap-evs-enrichment-enrich-lambda-uat",
+      "function_description": "CloudDeploy strap-evs-enrichment-enrich-lambda uat version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "uat",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "evs/evs-enrichment-lambda:<version>.zip",
+      "function_name": "strap-evs-enrichment-post-lambda-uat",
+      "function_description": "CloudDeploy strap-evs-enrichment-post-lambda uat version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "prod",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "evs/evs-enrichment-lambda:<version>.zip",
+      "function_name": "strap-evs-enrichment-enrich-lambda-prod",
+      "function_description": "CloudDeploy strap-evs-enrichment-enrich-lambda prod version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "prod",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "evs/evs-enrichment-lambda:<version>.zip",
+      "function_name": "strap-evs-enrichment-post-lambda-prod",
+      "function_description": "CloudDeploy strap-evs-enrichment-post-lambda prod version:<version>"
+    }
+  ],
+  "nci-strap-users": [
+    {
+      "type": "lambda",
+      "tier": "int",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "strap/strap-users-lambda:<version>.zip",
+      "function_name": "strap-users-get-datafiles-lambda-inttest",
+      "function_description": "CloudDeploy nci-strap-users int version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "int",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "strap/strap-users-lambda:<version>.zip",
+      "function_name": "strap-users-put-datafiles-lambda-inttest",
+      "function_description": "CloudDeploy nci-strap-users int version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "int",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "strap/strap-users-lambda:<version>.zip",
+      "function_name": "strap-users-post-datafiles-lambda-inttest",
+      "function_description": "CloudDeploy nci-strap-users int version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "int",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "strap/strap-users-lambda:<version>.zip",
+      "function_name": "strap-users-delete-datafiles-lambda-inttest",
+      "function_description": "CloudDeploy nci-strap-users int version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "int",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "strap/strap-users-lambda:<version>.zip",
+      "function_name": "strap-users-delete-lambda-inttest",
+      "function_description": "CloudDeploy nci-strap-users int version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "int",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "strap/strap-users-lambda:<version>.zip",
+      "function_name": "strap-users-post-lambda-inttest",
+      "function_description": "CloudDeploy nci-strap-users int version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "int",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "strap/strap-users-lambda:<version>.zip",
+      "function_name": "strap-users-put-lambda-inttest",
+      "function_description": "CloudDeploy nci-strap-users int version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "int",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "strap/strap-users-lambda:<version>.zip",
+      "function_name": "strap-users-get-lambda-inttest",
+      "function_description": "CloudDeploy nci-strap-users int version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "uat",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "strap/strap-users-lambda:<version>.zip",
+      "function_name": "strap-users-get-datafiles-lambda-uat",
+      "function_description": "CloudDeploy nci-strap-users uat version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "uat",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "strap/strap-users-lambda:<version>.zip",
+      "function_name": "strap-users-put-datafiles-lambda-uat",
+      "function_description": "CloudDeploy nci-strap-users uat version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "uat",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "strap/strap-users-lambda:<version>.zip",
+      "function_name": "strap-users-post-datafiles-lambda-uat",
+      "function_description": "CloudDeploy nci-strap-users uat version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "uat",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "strap/strap-users-lambda:<version>.zip",
+      "function_name": "strap-users-delete-datafiles-lambda-uat",
+      "function_description": "CloudDeploy nci-strap-users uat version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "uat",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "strap/strap-users-lambda:<version>.zip",
+      "function_name": "strap-users-delete-lambda-uat",
+      "function_description": "CloudDeploy nci-strap-users uat version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "uat",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "strap/strap-users-lambda:<version>.zip",
+      "function_name": "strap-users-post-lambda-uat",
+      "function_description": "CloudDeploy nci-strap-users uat version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "uat",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "strap/strap-users-lambda:<version>.zip",
+      "function_name": "strap-users-put-lambda-uat",
+      "function_description": "CloudDeploy nci-strap-users uat version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "uat",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "strap/strap-users-lambda:<version>.zip",
+      "function_name": "strap-users-get-lambda-uat",
+      "function_description": "CloudDeploy nci-strap-users uat version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "prod",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "strap/strap-users-lambda:<version>.zip",
+      "function_name": "strap-users-get-datafiles-lambda-prod",
+      "function_description": "CloudDeploy nci-strap-users prod version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "prod",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "strap/strap-users-lambda:<version>.zip",
+      "function_name": "strap-users-put-datafiles-lambda-prod",
+      "function_description": "CloudDeploy nci-strap-users prod version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "prod",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "strap/strap-users-lambda:<version>.zip",
+      "function_name": "strap-users-post-datafiles-lambda-prod",
+      "function_description": "CloudDeploy nci-strap-users prod version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "prod",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "strap/strap-users-lambda:<version>.zip",
+      "function_name": "strap-users-delete-datafiles-lambda-prod",
+      "function_description": "CloudDeploy nci-strap-users prod version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "prod",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "strap/strap-users-lambda:<version>.zip",
+      "function_name": "strap-users-delete-lambda-prod",
+      "function_description": "CloudDeploy nci-strap-users prod version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "prod",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "strap/strap-users-lambda:<version>.zip",
+      "function_name": "strap-users-post-lambda-prod",
+      "function_description": "CloudDeploy nci-strap-users prod version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "prod",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "strap/strap-users-lambda:<version>.zip",
+      "function_name": "strap-users-put-lambda-prod",
+      "function_description": "CloudDeploy nci-strap-users prod version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "prod",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "strap/strap-users-lambda:<version>.zip",
+      "function_name": "strap-users-get-lambda-prod",
+      "function_description": "CloudDeploy nci-strap-users prod version:<version>"
+    }
+  ],
+  "strap-containers-lambda": [
+    {
+      "type": "lambda",
+      "tier": "int",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "strap-containers-lambda:<version>.zip",
+      "function_name": "ctrp-strap-containers-lambda",
+      "function_description": "CloudDeploy ctrp-strap-containers-lambda int version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "uat",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "strap-containers-lambda:<version>.zip",
+      "function_name": "ctrp-strap-containers-lambda",
+      "function_description": "CloudDeploy ctrp-strap-containers-lambda uat version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "prod",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "strap-containers-lambda:<version>.zip",
+      "function_name": "ctrp-strap-containers-lambda",
+      "function_description": "CloudDeploy ctrp-strap-containers-lambda prod version:<version>"
+    }
+  ],
+  "ctrp-strap-deletion-lambda": [
+    {
+      "type": "lambda",
+      "tier": "int",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "ctrp-strap-deletion-lambda:<version>.zip",
+      "function_name": "ctrp-strap-deletion-lambda",
+      "function_description": "CloudDeploy ctrp-strap-deletion-lambda int version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "uat",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "ctrp-strap-deletion-lambda:<version>.zip",
+      "function_name": "ctrp-strap-deletion-lambda",
+      "function_description": "CloudDeploy ctrp-strap-deletion-lambda uat version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "prod",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "ctrp-strap-deletion-lambda:<version>.zip",
+      "function_name": "ctrp-strap-deletion-lambda",
+      "function_description": "CloudDeploy ctrp-strap-deletion-lambda prod version:<version>"
+    }
+  ],
+  "ctrp_strap_cprelationship_lambda": [
+    {
+      "type": "lambda",
+      "tier": "int",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "ctrp_strap_cprelationship_lambda:<version>.zip",
+      "function_name": "CTRP-STRAP-cprelationship-lambda",
+      "function_description": "CloudDeploy CTRP-STRAP-cprelationship-lambda int version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "uat",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "ctrp_strap_cprelationship_lambda:<version>.zip",
+      "function_name": "CTRP-STRAP-cprelationship-lambda",
+      "function_description": "CloudDeploy CTRP-STRAP-cprelationship-lambda uat version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "prod",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "ctrp_strap_cprelationship_lambda:<version>.zip",
+      "function_name": "CTRP-STRAP-cprelationship-lambda",
+      "function_description": "CloudDeploy CTRP-STRAP-cprelationship-lambda prod version:<version>"
+    }
+  ],
+  "nci-ctrp-glossary": [
+    {
+      "type": "lambda",
+      "tier": "int",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "ctrp-glossary/ctrpglossary-lambda:<version>.zip",
+      "function_name": "ctrp-get-glossary-lambda-inttest",
+      "function_description": "CloudDeploy nci-ctrp-glossary int version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "uat",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "ctrp-glossary/ctrpglossary-lambda:<version>.zip",
+      "function_name": "ctrp-get-glossary-lambda-uat",
+      "function_description": "CloudDeploy nci-ctrp-glossary uat version:<version>"
+    },
+    {
+      "type": "lambda",
+      "tier": "prod",
+      "zip_s3_bucket": "ctrp-lambda-hub",
+      "zip_name": "ctrp-glossary/ctrpglossary-lambda:<version>.zip",
+      "function_name": "ctrp-get-glossary-lambda-prod",
+      "function_description": "CloudDeploy nci-ctrp-glossary prod version:<version>"
+    }
+  ]
+}

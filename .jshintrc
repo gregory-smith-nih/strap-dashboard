@@ -1,0 +1,16 @@
+{
+  "undef": true,
+  "unused": true,
+  "globals": {
+    "$": true,
+    "BoxText": true,
+    "CircleText": true,
+    "Group": true,
+    "fabric": true,
+    "module": true
+  },
+  "esversion": 9,
+  "node": false,
+  "browser": true,
+  "devel": true
+}
