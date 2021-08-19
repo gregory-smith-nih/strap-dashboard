@@ -23,10 +23,3 @@ STRAP Dashboard relies on the `cloud_deploy` app being available to give the cur
 * Light Gray boxes are SQS Queues. The displayed number is the number of entries queued up. When the queues are full, there will be a green bar showing the percentage full (10,000 items is considered the maximum)
 * Light Gray circles are APIs. The date/time is the last deployment time
 * Yellow circles are libraries/modules that are dependencies on APIs
-
-## MISC.
-
-I had to turn on window naming chrome://flags/#window-naming and go to the Window->Name to name the window a 'test' so it wouldn't keep creating new windows when I opened index.html
-
-
-# strap-dashboard
