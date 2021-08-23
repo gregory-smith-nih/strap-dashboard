@@ -68,7 +68,7 @@ let MigrationTemporaryBucket_S3 = new S3Widget(
   500,
   names.int.MigrationTemporaryBucket
 )
-let DynamoDB = new S3Widget(
+let DynamoDB = new DBWidget(
   canvas,
   100,
   100,
@@ -86,33 +86,33 @@ let CTRP_LAMBDA_COMMONS = new LibWidget(
 DynamoDB.addMenuItem(
   'ctrp-trial',
   'https://console.aws.amazon.com/dynamodb/home?region=us-east-1#tables:selected=ctrp-trial;tab=items',
-  url => window.open(url, '_blank')
+  url => window.open(url, 'ctrp-trial')
 )
 TrialEnrichment_API.addMenuItem(
   'DataDog',
   'https://app.datadoghq.com/logs?query=service%3Actrp-trial-enrichment&cols=service&index=%2A&messageDisplay=expanded-md&stream_sort=desc',
-  url => window.open(url, '_blank')
+  url => window.open(url, 'DataDog')
 )
 TrialEnrichment_API.addMenuItem(
   'Sentry',
   'https://sentry.io/organizations/leidos-biomedical/issues/?project=1195518&statsPeriod=24h',
-  url => window.open(url, '_blank')
+  url => window.open(url, 'Sentry')
 )
 TrialEnrichment_API.addMenuItem(
   'Travis',
   'https://travis-ci.com/github/BIAD/ctrp-trials-enrichment',
-  url => window.open(url, '_blank')
+  url => window.open(url, 'Travis')
 )
 CTRP_LAMBDA_COMMONS.addMenuItem(
   'Travis',
   'https://travis-ci.com/github/BIAD/ctrp-lambda-commons',
-  url => window.open(url, '_blank')
+  url => window.open(url, 'Travis')
 )
 
 MigrationTemporaryBucket_S3.addMenuItem(
   'S3 Bucket',
   'https://s3.console.aws.amazon.com/s3/buckets/strap-migration-temporary-bucket?region=us-east-1&tab=objects',
-  url => window.open(url, '_blank')
+  url => window.open(url, 'S3 Bucket')
 )
 
 DynamoDB.toWidget(Pre_TrialEnrichment_SQS)
