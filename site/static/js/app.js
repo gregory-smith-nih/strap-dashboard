@@ -30,7 +30,7 @@ let names = {
     MigrationTemporaryBucket: 'strap-migration-temporary-bucket'
   },
   uat: {
-    Pre_TrialEnrichment_SQS: 'TrialEnrichment',
+    Pre_TrialEnrichment_SQS: 'EnrichTrials',
     TrialEnrichment_API: 'ctrp-trials-enrichment-uat',
     Post_TrialEnrichment_SQS: 'TRIALS2ES',
     MigrationTemporaryBucket: 'strap-migration-temporary-bucket'
@@ -43,6 +43,12 @@ let Pre_TrialEnrichment_SQS = new SQSWidget(
   300,
   300,
   names.int.Pre_TrialEnrichment_SQS
+)
+let Pre_TrialEnrichment_SQS_UAT = new SQSWidget(
+  canvas,
+  300,
+  350,
+  names.uat.Pre_TrialEnrichment_SQS
 )
 let TrialEnrichment_API = new APIWidget(
   canvas,
@@ -66,7 +72,7 @@ let DynamoDB = new S3Widget(
   canvas,
   100,
   100,
-  "DynamoDB"
+  "ctrp-trial"
 )
 let CTRP_LAMBDA_COMMONS = new LibWidget(
   canvas,
@@ -121,6 +127,7 @@ canvas.add(Pre_TrialEnrichment_SQS)
 canvas.add(MigrationTemporaryBucket_S3)
 canvas.add(DynamoDB)
 canvas.add(CTRP_LAMBDA_COMMONS)
+canvas.add(Pre_TrialEnrichment_SQS_UAT)
 
 let trialEnrichment_API = names.int.TrialEnrichment_API
 
